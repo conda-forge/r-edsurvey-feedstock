@@ -1,4 +1,4 @@
-{% set version = '2.6.1' %}
+{% set version = "2.6.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/EdSurvey_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/EdSurvey/EdSurvey_{{ version }}.tar.gz
-  sha256: 433e1870397ba6cd37c7858abc1bf83d452bcd18f0b34cace0fb8244ef5ab8c7
+  sha256: d6eabfc5f377ee7d527ad04cfe5f1b58ade5e95abc6828300e2e4b87408e4b08
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -70,21 +70,13 @@ test:
 about:
   home: https://www.air.org/project/nces-data-r-project-edsurvey
   license: GPL-2.0-only
-  summary: 'Read in and analyze functions for education survey and assessment data from the National
-    Center for Education Statistics (NCES) <https://nces.ed.gov/>, including National
-    Assessment of Educational Progress (NAEP) data <https://nces.ed.gov/nationsreportcard/>
-    and data from the International Assessment Database: Organisation for Economic Co-operation
-    and Development (OECD) <https://www.oecd.org/>, including Programme for International
-    Student Assessment (PISA), Teaching and Learning International Survey (TALIS), Programme
-    for the International Assessment of Adult Competencies (PIAAC), and International
-    Association for the Evaluation of Educational Achievement (IEA) <https://www.iea.nl/>,
-    including Trends in International Mathematics and Science Study (TIMSS), TIMSS Advanced,
-    Progress in International Reading Literacy Study (PIRLS), International Civic and
-    Citizenship Study (ICCS), International Computer and Information Literacy Study
-    (ICILS), and Civic Education Study (CivEd).'
+  summary: 'Read in and analyze functions for education survey and assessment data from the National Center for Education Statistics (NCES) <https://nces.ed.gov/>, including National Assessment of Educational Progress (NAEP) data <https://nces.ed.gov/nationsreportcard/> and data from the International Assessment Database:
+    Organisation for Economic Co-operation and Development (OECD) <https://www.oecd.org/>, including Programme for International Student Assessment (PISA), Teaching and Learning International Survey (TALIS), Programme for the International Assessment of Adult Competencies (PIAAC), and International Association for the Evaluation
+    of Educational Achievement (IEA) <https://www.iea.nl/>, including Trends in International Mathematics and Science Study (TIMSS), TIMSS Advanced, Progress in International Reading Literacy Study (PIRLS), International Civic and Citizenship Study (ICCS), International Computer and Information Literacy Study (ICILS), and
+    Civic Education Study (CivEd).'
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
