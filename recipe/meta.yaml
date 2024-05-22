@@ -1,4 +1,4 @@
-{% set version = "4.0.4" %}
+{% set version = "4.0.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/EdSurvey_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/EdSurvey/EdSurvey_{{ version }}.tar.gz
-  sha256: 77d4559d1a917a394314dbd720cc3f6c0723020409195493fa634ad493ace2e2
+  sha256: 99855781cbc7497bf6d47efaeb5703b7218c48a7207e5ec600c62cec566546b8
 
 build:
   merge_build_host: true  # [win]
